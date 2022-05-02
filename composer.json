@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "psr-4": {
+            "Dz7\\": "src"
+        }
+    },
+    "require": {
+        "team-reflex/discord-php": "^7.0",
+        "vlucas/phpdotenv": "^5.4"
+    }
+}
