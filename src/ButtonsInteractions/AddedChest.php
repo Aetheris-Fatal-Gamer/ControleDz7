@@ -33,7 +33,7 @@ class AddedChest {
 
         $itemInput = TextInput::new('Item adicionado:', TextInput::STYLE_SHORT, 'item')
             ->setRequired(true)
-            ->setPlaceholder('Ex: Cocaína embalada')
+            ->setPlaceholder('Ex: Ergolina')
             ->setMaxLength(300);
         $itemRow = ActionRow::new()->addComponent($itemInput);
         $this->actionsRows[] = $itemRow;

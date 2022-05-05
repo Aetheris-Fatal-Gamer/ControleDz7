@@ -33,7 +33,7 @@ class ChestWithdrawal {
 
         $itemInput = TextInput::new('Item retirado:', TextInput::STYLE_SHORT, 'item')
             ->setRequired(true)
-            ->setPlaceholder('Ex: Cocaína embalada');
+            ->setPlaceholder('Ex: Ergolina');
         $itemRow = ActionRow::new()->addComponent($itemInput);
         $this->actionsRows[] = $itemRow;
 
