@@ -77,16 +77,15 @@ class ChestWithdrawal {
             ]);
             $interaction->guild->channels->save($newChannel)->done(function(Channel $channel) use ($message, $interaction) {
                 $channel->sendMessage($message);
-                $channel->setPermissions($interaction->member, [
-                    'view_channel',
-                    'read_message_history',
-                ], [
-                    'send_messages',
-                    'add_reactions',
-                ])->done(function() use ($interaction) {
-                    $interaction->acknowledge();
-                });
+                $interaction->acknowledge();
             });
+        }
+        
+        if (!empty($_ENV['CHANNEL_CONTROL_CHEST'])) {
+            $channelGeral = $interaction->guild->channels->get('id', $_ENV['CHANNEL_CONTROL_CHEST']);
+            if ($channelGeral) {
+                $channelGeral->sendMessage($message);
+            }
         }
     }
 }
