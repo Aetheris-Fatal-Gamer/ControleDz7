@@ -7,7 +7,7 @@ use Discord\Parts\User\Member;
 
 class Util { 
     
-    public static function formatCustomId($customId): string {
+    public static function formatCustomId(string $customId): string {
         $words = explode('_', $customId);
         $words = array_map('ucfirst', $words);
         return implode('', $words);

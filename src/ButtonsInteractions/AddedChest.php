@@ -10,7 +10,7 @@ use Dz7\Util;
 
 class AddedChest {
 
-    private $actionsRows = [];
+    private array $actionsRows = [];
 
     public function handle(Interaction $interaction, Discord $discord): void {
         $this->buildActionsRows($interaction);
