@@ -2,6 +2,8 @@
 
 namespace Dz7;
 
+use DateTime;
+use DateTimeZone;
 use Discord\Parts\Interactions\Interaction;
 use Discord\Parts\User\Member;
 
@@ -28,5 +30,11 @@ class Util {
             return null;
         }
         return $passport;
+    }
+
+    public static function now(): string {
+        $timezone = new DateTimeZone('America/Sao_Paulo');
+        $datetime = new DateTime('now', $timezone);
+        return $datetime->format('Y-m-d H:i:s');
     }
 }

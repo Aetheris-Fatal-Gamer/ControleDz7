@@ -8,7 +8,7 @@ use Discord\Discord;
 use Discord\Parts\Interactions\Interaction;
 use Dz7\Util;
 
-class RegisterGoal
+class AddedFarmTotal
 {
 
     private array $actionsRows = [];
@@ -19,7 +19,7 @@ class RegisterGoal
 
         $passport = Util::extractPassport($interaction);
         $passport = $passport ? ' - ' . $passport : '';
-        $interaction->showModal('Registro de meta' . $passport, 'register_goal', $this->actionsRows);
+        $interaction->showModal('Adicionar itens de farm - ' . $passport, 'added_farm', $this->actionsRows);
     }
 
     private function buildActionsRows(Interaction $interaction): void
@@ -33,39 +33,39 @@ class RegisterGoal
             $this->actionsRows[] = $passportRow;
         }
 
-        $quantityInput = TextInput::new('Gatilho: (Somente números)', TextInput::STYLE_SHORT, 'gunTrigger')
+        $itemInput = TextInput::new('Gatilho:', TextInput::STYLE_SHORT, 'gunTrigger')
             ->setValue(0)
             ->setMaxLength(10)
             ->setPlaceholder('Ex: 30');
-        $quantityRow = ActionRow::new()->addComponent($quantityInput);
-        $this->actionsRows[] = $quantityRow;
+        $itemRow = ActionRow::new()->addComponent($itemInput);
+        $this->actionsRows[] = $itemRow;
 
-        $quantityInput = TextInput::new('Part. Arma: (Somente números)', TextInput::STYLE_SHORT, 'gunPart')
+        $itemInput = TextInput::new('Part. Arma:', TextInput::STYLE_SHORT, 'gunPart')
             ->setValue(0)
             ->setMaxLength(10)
             ->setPlaceholder('Ex: 20');
-        $quantityRow = ActionRow::new()->addComponent($quantityInput);
-        $this->actionsRows[] = $quantityRow;
+        $itemRow = ActionRow::new()->addComponent($itemInput);
+        $this->actionsRows[] = $itemRow;
 
-        $quantityInput = TextInput::new('Ferro: (Somente números)', TextInput::STYLE_SHORT, 'ironIngot')
+        $itemInput = TextInput::new('Ferro:', TextInput::STYLE_SHORT, 'ironIngot')
             ->setValue(0)
             ->setMaxLength(10)
             ->setPlaceholder('Ex: 10');
-        $quantityRow = ActionRow::new()->addComponent($quantityInput);
-        $this->actionsRows[] = $quantityRow;
+        $itemRow = ActionRow::new()->addComponent($itemInput);
+        $this->actionsRows[] = $itemRow;
 
-        $quantityInput = TextInput::new('Alumínio: (Lata coloca a quantidade vezes 5)', TextInput::STYLE_SHORT, 'aluminumPlate')
+        $itemInput = TextInput::new('Alumínio: (Lata coloca a quantidade vezes 5)', TextInput::STYLE_SHORT, 'aluminumPlate')
             ->setValue(0)
             ->setMaxLength(10)
             ->setPlaceholder('Ex: 80');
-        $quantityRow = ActionRow::new()->addComponent($quantityInput);
-        $this->actionsRows[] = $quantityRow;
+        $itemRow = ActionRow::new()->addComponent($itemInput);
+        $this->actionsRows[] = $itemRow;
 
-        $quantityInput = TextInput::new('Cobre: (Pilha coloca a quantidade vezes 5)', TextInput::STYLE_SHORT, 'copperPlate')
+        $itemInput = TextInput::new('Cobre: (Pilha coloca a quantidade vezes 5)', TextInput::STYLE_SHORT, 'copperPlate')
             ->setValue(0)
             ->setMaxLength(10)
             ->setPlaceholder('Ex: 50');
-        $quantityRow = ActionRow::new()->addComponent($quantityInput);
-        $this->actionsRows[] = $quantityRow;
+        $itemRow = ActionRow::new()->addComponent($itemInput);
+        $this->actionsRows[] = $itemRow;
     }
 }

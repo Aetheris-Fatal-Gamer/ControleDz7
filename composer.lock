@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b98d263f3eebd1e7e1739025c8e1126d",
+    "content-hash": "184f134f00ab3804662dfec8c1e93580",
     "packages": [
         {
             "name": "discord-php/http",
@@ -1476,6 +1476,56 @@
             "time": "2022-02-03T13:17:37+00:00"
         },
         {
+            "name": "react/mysql",
+            "version": "v0.5.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/friends-of-reactphp/mysql.git",
+                "reference": "7b4428da4d625787a0ce1420b497dadcd70ff7bd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/friends-of-reactphp/mysql/zipball/7b4428da4d625787a0ce1420b497dadcd70ff7bd",
+                "reference": "7b4428da4d625787a0ce1420b497dadcd70ff7bd",
+                "shasum": ""
+            },
+            "require": {
+                "evenement/evenement": "^3.0 || ^2.1 || ^1.1",
+                "php": ">=5.4.0",
+                "react/event-loop": "^1.2",
+                "react/promise": "^2.7",
+                "react/promise-stream": "^1.1",
+                "react/promise-timer": "^1.8",
+                "react/socket": "^1.9"
+            },
+            "require-dev": {
+                "clue/block-react": "^1.2",
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.35"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "React\\MySQL\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Async MySQL database client for ReactPHP.",
+            "keywords": [
+                "async",
+                "database",
+                "mysql",
+                "reactphp"
+            ],
+            "support": {
+                "issues": "https://github.com/friends-of-reactphp/mysql/issues",
+                "source": "https://github.com/friends-of-reactphp/mysql/tree/v0.5.6"
+            },
+            "time": "2021-12-14T11:25:28+00:00"
+        },
+        {
             "name": "react/partial",
             "version": "v3.0.0",
             "source": {
@@ -2834,5 +2884,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.0.0"
 }
